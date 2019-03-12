@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <title>Challenge</title>
+    <link rel="stylesheet" href="random.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Courgette|Itim|Libre+Barcode+128+Text|Sriracha|ZCOOL+QingKe+HuangYou"
+        rel="stylesheet">
+    <style>
+        #table {
+            /* border-collapse: collapse; */
+            width: 100%;
+        }
+
+        td {
+            border: 2px solid snow;
+            padding: 15px;
+            /* vertical-align: middle; */
+            text-align: center;
+            background-color: slategray;
+            color: white;
+            font-size: 20px;
+        }
+
+        tr {
+            text-align: center;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Welcome -->
+    <div class="box">
+        <div class="img1">
+        </div>
+
+        <div class="col-11">
+            <div class="welcome col-12">Welcome</div>
+        </div>
+
+    </div>
+    <p></p>
+    <!-- เลือก level -->
+    <div class="col-12 box">
+        <div class="col-6 fontItim" style="text-align: center;font-size: 30px;text-shadow: 0.1em 0.1em 0.2em black">
+            เลือกระดับ :
+            <select id="lv" name="lv" style="font-size: 30px" class="fontZCOOL">
+                <option value="ez">Eazy</option>
+                <option value="normal">Normal</option>
+                <option value="hard">Hard</option>
+                <option value="extreme">Extreme</option>
+            </select>
+        </div>
+        <div class="col-6" style="text-align: center;">
+            <button id="submit" style="font-size: 30px" class="fontZCOOL">Submit/Re-Table</div>
+
+    </div>
+    <p></p>
+    <!-- Show table -->
+    <table>
+        <div class="fontCourgette" id="table" align="center"></div>
+    </table>
+    <P></P>
+
+    <!-- Answer -->
+    <div class="col-12 box" style="text-align: center;font-size: 30px;">
+        <div class="col-12 fontItim" style="text-shadow: 0.1em 0.1em 0.2em black;color: wheat">
+            เลขใดมีค่าซ้ำกันมากที่สุด :
+            <input class="col-1" id="num" name="num" style="text-align: center;font-size: 30px;"></div>
+        <p></p>
+        <div class="col-12"><button id="answer" class="fontCourgette"
+                style="text-align: center;font-size: 30px;">Answer</button></div>
+    </div>
+    <p></p><p></p>
+
+    <!-- Result-->
+    <div id="result"
+     class="fontCourgette" style="text-align: center;font-size: 120px;color: wheat">
+
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <script src="random.js"></script>
+</body>
+
+
+
+
+</html>
