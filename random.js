@@ -13,7 +13,7 @@ $(function () {
         }
 
         var i, j, count0 = 0, count1 = 0, count2 = 0, count3 = 0, count4 = 0, count5 = 0, count6 = 0, count7 = 0, count8 = 0, count9 = 0;
-
+        $("#table").empty();//reset table
         for (i = 1; i <= row; i++) {
             var table = '<tr>';
             $('#table').append(table);
@@ -45,12 +45,12 @@ $(function () {
         // console.log("count4=" + count4); console.log("count5=" + count5);
         // console.log("count6=" + count6); console.log("count7=" + count7);
         // console.log("count8=" + count8); console.log("count9=" + count9);
-        $(document).ready(function(){
+        //$(document).ready(function(){
             
-            $("#submit").click(function(){
-                $("#table").empty();
-            });
-        });
+        //    $("#submit").click(function(){
+        //        $("#table").empty();
+        //    });
+        //});
         // $("#submit").click(function(){
         //     $("#submit").text("Try again");
 
