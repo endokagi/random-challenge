@@ -14,7 +14,6 @@ $(function () {
         var lv = $("#lv").val();
         console.log("Submit Clicked!");
         console.log("Level: " + lv);
-        var array = Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
         var col, row;
         switch (lv) {
             case "ez": col = 5, row = 5; break;
@@ -28,17 +27,17 @@ $(function () {
             var table = '<tr>';
             $('#table').append(table);
             for (j = 1; j <= col; j++) {
-                var item = array[Math.floor(Math.random() * array.length)];
+                var item = Math.floor(Math.random() * 10);
                 var tableRow = '<td>' + item + '</td>';
-                if (item == num[0]) { count0 = +1; }
-                else if (item == array[1]) { count1 += 1; }
-                else if (item == array[2]) { count2 += 1; }
-                else if (item == array[3]) { count3 += 1; }
-                else if (item == array[4]) { count4 += 1; }
-                else if (item == array[5]) { count5 += 1; }
-                else if (item == array[6]) { count6 += 1; }
-                else if (item == array[7]) { count7 += 1; }
-                else if (item == array[8]) { count8 += 1; }
+                if (item == 0) { count0 = +1; }
+                else if (item == 1) { count1 += 1; }
+                else if (item == 2) { count2 += 1; }
+                else if (item == 3) { count3 += 1; }
+                else if (item == 4) { count4 += 1; }
+                else if (item == 5) { count5 += 1; }
+                else if (item == 6) { count6 += 1; }
+                else if (item == 7) { count7 += 1; }
+                else if (item == 8) { count8 += 1; }
                 else { count9 += 1; }
                 $('#table').append(tableRow);
 
