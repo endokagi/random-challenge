@@ -109,8 +109,8 @@ tr {
 }
 
 
-/* โทรศัพท์ width 375 */
-@media screen and (max-width: 375px) {
+/* โทรศัพท์ width 414 */
+@media screen and (max-width: 414px) {
     [class*="col-"]{
         width:100%;
     }
