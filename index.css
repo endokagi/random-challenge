@@ -145,6 +145,7 @@ tr {
     .lv{
         text-align: center;
         font-size: 20px;
+        color: gold;
         text-shadow: 0.1em 0.1em 0.2em black
     }
     .lvs{
