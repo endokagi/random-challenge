@@ -2,24 +2,11 @@
 
 <head>
     <title>Challenge</title>
-    <link rel="stylesheet" href="random.css">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
         href="https://fonts.googleapis.com/css?family=Courgette|Itim|Libre+Barcode+128+Text|Sriracha|ZCOOL+QingKe+HuangYou"
         rel="stylesheet">
-    <style>
-        td {
-            border: 2px solid snow;
-            padding: 15px;
-            text-align: center;
-            background-color: slategray;
-            color: white;
-            font-size: 20px;
-        }
-
-        tr {
-            text-align: center;
-        }
-    </style>
 </head>
 
 <body id="body">
@@ -27,64 +14,60 @@
     <div class="box">
         <div id="img" class="img1">
         </div>
-
-        <div class="col-11">
+        <div class="col-9 box">
             <div id="welcome" class="welcome col-12">Welcome</div>
         </div>
-
     </div>
     <p></p>
+
     <!-- เลือก level -->
     <div class="col-12 box" id="divlv">
-        <div class="col-6 fontItim" style="text-align: center;font-size: 40px;text-shadow: 0.1em 0.1em 0.2em black">
+        <div class="col-9 fontItim lv">
             เลือกระดับ :
-            <select id="lv" name="lv" style="font-size: 40px" class="fontZCOOL">
+            <select id="lv" name="lv"  class="fontZCOOL lvs">
                 <option value="ez">Eazy</option>
                 <option value="normal">Normal</option>
                 <option value="hard">Hard</option>
                 <option value="extreme">Extreme</option>
             </select>
         </div>
-        <div class="col-6" style="text-align: center;">
-            <button id="submit" style="font-size: 40px" class="fontZCOOL">Submit</div>
-
+        <div class="col-1" style="text-align: center;">
+            <button id="submit" class="fontZCOOL lvs">Submit</div>
     </div>
     <p></p>
+    
     <!-- Show table -->
-    <table>
-        <div class="fontZCOOL" id="table" align="center"></div>
+    <table class="box">
+        <div>
+        <div class="fontZCOOL" id="table" align="center"></div></div>
     </table>
     <P></P>
 
     <!-- Answer -->
-    <div id="divAns" class="col-12 box" style="text-align: center;font-size: 30px;">
-        <div class="col-12 fontItim" style="text-shadow: 0.1em 0.1em 0.2em black;color: wheat">
+    <div id="divAns" class="col-12 box Ans">
+        <div class="col-12 fontItim" style="text-shadow: 0.1em 0.1em 0.2em black;color: wheat;">
             เลขใดมีค่าซ้ำกันมากที่สุด :
-            <input class="col-1" id="num" name="num" style="text-align: center;font-size: 30px;"></div>
+            <input class="col-1 Ans" id="num" name="num"></div>
         <p></p>
-        <div class="col-12"><button id="answer" class="fontCourgette"
-                style="text-align: center;font-size: 30px;">Answer</button></div>
-    </div>
-    <p></p>
-    <p></p>
+        <div class="col-12"><button id="answer" class="fontCourgette Ans">Answer</button></div>
+    </div><p></p><p></p>
 
     <!-- Result-->
     <div id="result" class="fontSriracha result">
     </div>
     <p></p>
 
+    <!-- reset -->
     <div id="reset" style="text-align: center;">
-        <button class="fontCourgette" id="reset" style="font-size: 100px;background-color: blue;color: gold;">
+        <button class="fontCourgette reset" id="reset">
             Reset</button>
     </div>
 
-
-
-
+    <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
-    <script src="random.js"></script>
+    <script src="index.js"></script>
 </body>
 
 
