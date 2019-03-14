@@ -1,5 +1,6 @@
 body{
     background-image: url("https://s.videogamer.com/meta/c91b/bbd5ba32-a92a-423b-b27f-df8c87f19060_3ec01ef7-f1f7-4e1d-85a3-d7757a65bf79_rainbow-six-siege-update.jpg");
+    background-position: center;
 }
 
 *{box-sizing: border-box;}
@@ -42,22 +43,6 @@ tr {
     flex-wrap: wrap;
 }
 
-.welcome{
-    padding: 10px;
-    text-align: center;
-    font-size: 120px;
-    color: aliceblue;
-    text-shadow: 0.1em 0.1em 0.2em black;
-    font-family: 'Courgette', cursive;
-}
-
-.result{
-    text-align: center;
-    font-size: 150px;
-    color: wheat;
-    text-shadow: 0.1em 0.1em 0.2em red;
-}
-
 .img1{
     background-image: url("https://66.media.tumblr.com/4a80c8f0377359f54e1190e3f358caba/tumblr_pbijpfZeQo1u4gq67o2_r1_250.gif");
     border-radius: 100%;
@@ -65,6 +50,15 @@ tr {
     width: 100px;
     height: 100px;
 
+}
+
+.welcome{
+    padding: 10px;
+    text-align: center;
+    font-size: 120px;
+    color: aliceblue;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    font-family: 'Courgette', cursive;
 }
 
 .lv{
@@ -77,14 +71,22 @@ tr {
     font-size: 40px;
 }
 
-.reset{
-    font-size: 100px;
-    background-color: blue;color: gold;
-}
-
 .Ans{
     text-align: center;
     font-size: 30px;
+}
+
+.result{
+    text-align: center;
+    font-size: 140px;
+    color: wheat;
+    text-shadow: 0.1em 0.1em 0.2em red;
+}
+
+.reset{
+    font-size: 100px;
+    background-color: blue;color: gold;
+    border-radius: 10%;
 }
 
 .fontZCOOL{
@@ -161,6 +163,7 @@ tr {
     .reset{
         font-size: 40px;
         background-color: blue;color: gold;
+        border-radius: 20%;
     }
     
 }

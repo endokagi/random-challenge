@@ -6,18 +6,17 @@ $(function () {
     $("#welcome").fadeIn(1000);
     $("#welcome").fadeTo("slow", 0.7);
     $("#divlv").hide();
-    $("#divlv").show(1500);
+    $("#divlv").show(1150);
     $("#divAns").hide();
     $("#reset").hide();
-    // $("#countdown").hide();
 
     // click submit
-    $("#submit").click(function () {
-        var lv = $("#lv").val();
+    $("#submit").click(function (level) {
+        var level = $("#lv").val();
         console.log("Submit Clicked!");
         console.log("Level: " + lv);
         var col, row;
-        switch (lv) {
+        switch (level) {
             case "ez": col = 4, row = 4; break;
             case "normal": col = 8, row = 8; break;
             case "hard": col = 10, row = 10; break;
@@ -47,13 +46,14 @@ $(function () {
             var table2 = '</tr>';
             $('#table').append(table2);
         }
+        $("#welcome").text("ทายซิ! เลขไหน เยอะสุด").hide().fadeIn(1000).css("color", "red")
+            .css("font-family", "'Itim', cursive").css("text-align", "right");
         $("#divlv").hide();
         $("#table").fadeOut("slow");
         $("#table").fadeIn(1000);
-        $("#divAns").fadeOut();
-        $("#divAns").fadeIn("slow");
-        $("#welcome").text("ทายซิ! เลขไหน เยอะสุด").hide().fadeIn(1000).css("color", "red")
-            .css("font-family", "'Itim', cursive").css("text-align", "right");
+        $("#divAns").hide();
+        $("#divAns").fadeIn(1000);
+
 
         // click answer
         $("#answer").click(function () {
@@ -79,19 +79,19 @@ $(function () {
             $("#divAns").hide();
             $("#table").remove();
             $("#reset").fadeIn(1000);
-            $("#welcome").text("Thank You").hide().fadeIn(1000).css("color", "gold");
 
             // calculate
             var numarray = Array(count0, count1, count2, count3, count4
                 , count5, count6, count7, count8, count9);
 
-            // find all answer
+            // find max num
             var maxnum = numarray[0], i, j, k;
             for (i in numarray) {
                 if (numarray[i] > maxnum) {
                     maxnum = numarray[i];
                 }
             }
+            // count num repeat 
             var showresult;
             var other = new Array();
             for (j in numarray) {
@@ -99,6 +99,7 @@ $(function () {
                     other.push(j);
                 }
             }
+            // answer
             for (k in other) {
                 if (other.length == 1) {
                     showresult = "คำตอบ คือ เลข " + other;
@@ -113,23 +114,26 @@ $(function () {
                     check = "true"; break;
                 } else { check = "false"; }
             }
-
+            var result;
             if (checkAns == 0) {
-                var result = "Oops! Something went wrong<br>ใส่ผิดอะ ลองใหม่นะ</br>";
+                $("#welcome").text("Try again").hide().fadeIn(1000).css("color", "gold");
+                result = "Oops! Something went wrong<br>ใส่ผิดอะ ลองใหม่นะ</br>";
                 $("#body").css("background-image"
                     , "url(https://stmed.net/sites/default/files/question-mark-wallpapers-25286-9601130.jpg)");
                 $("#result").css("text-shadow", "0.1em 0.1em 0.2em green").css("color", "yellow");
                 console.log("Oops! Something went wrong");
             }
             else if (checkAns == 2) {
-                var result = "Wrong Answer!<p></p>,but you found it.";
+                $("#welcome").text("Congrats!").hide().fadeIn(1000).css("color", "gold");
+                result = "Wrong Answer!<p></p>,but you found it.";
                 $("#body").css("background-image"
                     , "url(https://wallpapermemory.com/uploads/815/easter-egg-wallpaper-full-hd-324919.jpg)");
                 $("#result").css("text-shadow", "0.1em 0.1em 0.2em black").css("color", "gold");
                 console.log("ee!");
             }
             else if (checkAns == 3) {
-                var result = "Yeah!<br>"+total+"</br>";
+                $("#welcome").text("?  ?  ?  ?").hide().fadeIn(1000).css("color", "gold");
+                result = "Yeah!<br>" + total + "</br>";
                 $("#body").css("background-image"
                     , "url(https://ak6.picdn.net/shutterstock/videos/3808376/thumb/4.jpg)");
                 $("#result").css("text-shadow", "0.1em 0.1em 0.2em black").css("color", "gold");
@@ -137,17 +141,19 @@ $(function () {
             }
             else {
                 if (check == "true") {
-                    var result = "You Won" + '<br>' + showresult + '</br>';
+                    $("#welcome").text("Thank You").hide().fadeIn(1000).css("color", "gold");
+                    result = "You Won" + '<br>' + showresult + '</br>';
                     $("#body").css("background-image"
                         , "url(https://images.alphacoders.com/884/thumb-1920-884239.jpg)");
                     $("#result").css("color", "yellow");
                     console.log("You Won");
                 }
                 else if (check == "false") {
-                    var result = "แง~~ ทายผิดนะแจ๊ะ T-T<br>ไว้ลองใหม่นะ ;p</br>";
+                    $("#welcome").text("Thank You").hide().fadeIn(1000).css("color", "gold");
+                    result = "แง~~ ทายผิดนะแจ๊ะ T-T<br>ไว้ลองใหม่นะ ;p</br>";
                     $("#body").css("background-image"
                         , "url(https://i.imgur.com/FcVnqFW.jpg)");
-                    $("#result").css("text-shadow", "0.1em 0.1em 0.2em black");
+                    $("#result").css("text-shadow", "0.1em 0.1em 0.2em black").css("color", "wheat");
                     console.log("You guess wrong");
                 }
             }
