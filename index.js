@@ -24,7 +24,7 @@ $(function () {
             case "extreme": col = 9, row = 20; break;
         }
         // show table
-        var i, j, count0 = 0, count1 = 0, count2 = 0, count3 = 0
+        var i, j, total = 0, count0 = 0, count1 = 0, count2 = 0, count3 = 0
             , count4 = 0, count5 = 0, count6 = 0, count7 = 0, count8 = 0, count9 = 0;
         for (i = 1; i <= row; i++) {
             var table = '<tr>';
@@ -33,15 +33,15 @@ $(function () {
                 var item = Math.floor(Math.random() * 10);
                 var tableRow = '<td>' + item + '</td>';
                 if (item == 0) { count0 = +1; }
-                else if (item == 1) { count1 += 1; }
-                else if (item == 2) { count2 += 1; }
-                else if (item == 3) { count3 += 1; }
-                else if (item == 4) { count4 += 1; }
-                else if (item == 5) { count5 += 1; }
-                else if (item == 6) { count6 += 1; }
-                else if (item == 7) { count7 += 1; }
-                else if (item == 8) { count8 += 1; }
-                else { count9 += 1; }
+                else if (item == 1) { count1 += 1; total += item; }
+                else if (item == 2) { count2 += 1; total += item; }
+                else if (item == 3) { count3 += 1; total += item; }
+                else if (item == 4) { count4 += 1; total += item; }
+                else if (item == 5) { count5 += 1; total += item; }
+                else if (item == 6) { count6 += 1; total += item; }
+                else if (item == 7) { count7 += 1; total += item; }
+                else if (item == 8) { count8 += 1; total += item; }
+                else { count9 += 1; total += item; }
                 $('#table').append(tableRow);
             }
             var table2 = '</tr>';
@@ -68,6 +68,9 @@ $(function () {
                 else if (num == "0572") {
                     checkAns = 2; break;
                 }
+                else if (num == total) {
+                    checkAns = 3; break;
+                }
                 else {
                     alert("เฉพาะเลข 1-9 เท่านั้น");
                     checkAns = 0; break;
@@ -81,11 +84,6 @@ $(function () {
             // calculate
             var numarray = Array(count0, count1, count2, count3, count4
                 , count5, count6, count7, count8, count9);
-            // console.log("count0=" + numarray[0]); console.log("count1=" + numarray[1]);
-            // console.log("count2=" + numarray[2]); console.log("count3=" + numarray[3]);
-            // console.log("count4=" + numarray[4]); console.log("count5=" + numarray[5]);
-            // console.log("count6=" + numarray[6]); console.log("count7=" + numarray[7]);
-            // console.log("count8=" + numarray[8]); console.log("count9=" + numarray[9]);
 
             // find all answer
             var maxnum = numarray[0], i, j, k;
@@ -127,6 +125,13 @@ $(function () {
                 var result = "Wrong Answer!<p></p>,but you found it.";
                 $("#body").css("background-image"
                     , "url(https://wallpapermemory.com/uploads/815/easter-egg-wallpaper-full-hd-324919.jpg)");
+                $("#result").css("text-shadow", "0.1em 0.1em 0.2em black").css("color", "gold");
+                console.log("ee!");
+            }
+            else if (checkAns == 3) {
+                var result = "Yeah!<br>"+total+"</br>";
+                $("#body").css("background-image"
+                    , "url(https://ak6.picdn.net/shutterstock/videos/3808376/thumb/4.jpg)");
                 $("#result").css("text-shadow", "0.1em 0.1em 0.2em black").css("color", "gold");
                 console.log("ee!");
             }
