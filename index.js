@@ -58,7 +58,7 @@ $(function () {
             alert("จะโกงเป่าเราหน่ะ");
             alert("อย่านะ อย่า~~~ ขอหล่ะ T-T");
         });
-        count0 = 0,count2 = 2,count5 = 5,count7 = 7;
+        count0 = 0, count2 = 2, count5 = 5, count7 = 7;
 
         // click answer
         $("#answer").click(function () {
