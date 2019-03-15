@@ -1,5 +1,7 @@
-body{
-    background-image: url("https://s.videogamer.com/meta/c91b/bbd5ba32-a92a-423b-b27f-df8c87f19060_3ec01ef7-f1f7-4e1d-85a3-d7757a65bf79_rainbow-six-siege-update.jpg");
+html{
+    background-image: url("image/image-ela.jpg");
+    background-size: cover;           
+    background-attachment: fixed;
     background-position: center;
 }
 
@@ -44,7 +46,7 @@ tr {
 }
 
 .img1{
-    background-image: url("https://66.media.tumblr.com/4a80c8f0377359f54e1190e3f358caba/tumblr_pbijpfZeQo1u4gq67o2_r1_250.gif");
+    background-image: url("image/ikaros.gif");
     border-radius: 100%;
     background-size: contain;
     width: 100px;
@@ -55,7 +57,7 @@ tr {
 .welcome{
     padding: 10px;
     text-align: center;
-    font-size: 120px;
+    font-size: 110px;
     color: aliceblue;
     text-shadow: 0.1em 0.1em 0.2em black;
     font-family: 'Courgette', cursive;
@@ -64,6 +66,7 @@ tr {
 .lv{
     text-align: right;
     font-size: 40px;
+    color: gold;
     text-shadow: 0.1em 0.1em 0.2em black
 }
 
@@ -78,7 +81,7 @@ tr {
 
 .result{
     text-align: center;
-    font-size: 140px;
+    font-size: 120px;
     color: wheat;
     text-shadow: 0.1em 0.1em 0.2em red;
 }

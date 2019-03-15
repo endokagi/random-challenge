@@ -1,7 +1,7 @@
-<html>
+<html id="html">
 
 <head>
-    <title>Challenge</title>
+    <title>Mini-game</title>
     <link rel="stylesheet" href="index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
@@ -9,12 +9,12 @@
         rel="stylesheet">
 </head>
 
-<body id="body">
+<body>
     <!-- Welcome -->
     <div class="box">
         <div id="img" class="img1">
         </div>
-        <div class="col-9 box">
+        <div class="col-10 box">
             <div id="welcome" class="welcome col-12">Welcome</div>
         </div>
     </div>
@@ -24,7 +24,7 @@
     <div class="col-12 box" id="divlv">
         <div class="col-9 fontItim lv">
             เลือกระดับ :
-            <select id="lv" name="lv"  class="fontZCOOL lvs">
+            <select id="lv" name="lv" class="fontZCOOL lvs">
                 <option value="ez">Eazy</option>
                 <option value="normal">Normal</option>
                 <option value="hard">Hard</option>
@@ -35,11 +35,12 @@
             <button id="submit" class="fontZCOOL lvs">Submit</div>
     </div>
     <p></p>
-    
+
     <!-- Show table -->
     <table class="box">
         <div>
-        <div class="fontSriracha" id="table" align="center"></div></div>
+            <div class="fontSriracha" id="table" align="center"></div>
+        </div>
     </table>
     <P></P>
 
@@ -47,10 +48,12 @@
     <div id="divAns" class="col-12 box Ans">
         <div class="col-12 fontItim" style="text-shadow: 0.1em 0.1em 0.2em black;color: wheat;">
             เลขใดมีค่าซ้ำกันมากที่สุด :
-            <input class="col-1 Ans" id="num" name="num"></div>
+            <input class="col-1 Ans" id="num" type="text" placeholder=""></div>
         <p></p>
         <div class="col-12"><button id="answer" class="fontCourgette Ans">Answer</button></div>
-    </div><p></p><p></p>
+    </div>
+    <p></p>
+    <p></p>
 
     <!-- Result-->
     <div id="result" class="fontSriracha result">
